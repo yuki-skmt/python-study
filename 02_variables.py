@@ -151,9 +151,202 @@ def list_type():
     # リストの要素数
     print(len(f))
 
+    # リストへの要素追加
+    g = ['りんご', 'みかん', 'バナナ']
+    g.append('いちご')
+    print(g)
+
+    # リストへの要素挿入
+    g.insert(0, 'オレンジ')
+    print(g)
+
+    # リストの要素削除(del)
+    del g[2]
+    print(g)
+
+    # リストの要素削除(remove)
+    g.remove('オレンジ')
+    print(g)
+
+    # リストの要素取り出し(pop)
+    h = g.pop(2)
+    print(g)
+    print(h)
+
+    # リストの要素検索
+    i = g.index('バナナ')
+    print(i)
+
+    # リストのアンパック
+    j = [100, 200, 300]
+    k, l, m = j
+    print(k)
+    print(l)
+    print(m)
+
+# tuple
+def tuple_type():
+    t1 = ()
+    t2 = (1, )  # 要素が1つだけのタプルを使用する場合、末尾にカンマ必須
+    t3 = (1, 2)
+
+    # タプルへの変換
+    t4 = tuple([1, 2, 3])
+    print(t4)
+
+    # タプルの要素参照、要素数取得、アンパックはリストと同じため省略
+
+    # 要素の入れ替え
+    # (内部的にはタプル化してアンパックしている)
+    x = 100
+    y = 200
+    x, y = y, x
+    print(x)
+    print(y)
+
+# range
+def range_type():
+    r1 = range(4)
+    r2 = range(4, 7)
+    r3 = range(3, 10, 2)
+    r4 = range(10, 6, -1)
+    print(list(r1))
+    print(list(r2))
+    print(list(r3))
+    print(list(r4))
+
+# set
+def set_type():
+    a = {1, 3, 5, 7}
+    print(a)
+    
+    # 重複排除されたsetを生成
+    b = set([1, 2, 3, 1, 2, 3])
+    print(b)
+
+    # 空のリスト
+    c = set()
+    print(c)
+
+    # 追加
+    c.add(8)
+    print(c)
+
+    # 重複を伴う追加はできない
+    c.add(8)
+    print(c)
+
+    # 削除
+    d = {1, 2, 3, 4}
+    print(d)
+    d.remove(3)
+    print(d)
+
+    # 全削除
+    d.clear()
+    print(d)
+
+    # 存在判定
+    e = {1, 2, 3, 4, 5}
+    print(e)
+    print(1 in e)
+    print(6 in e)
+
+    # 集合論理
+    f = {'A', 'B', 'C'}
+    g = {'C', 'D', 'E'}
+
+    # 和集合
+    h = f.union(g)
+    print(h)
+
+    # 差集合
+    i = f.intersection(g)
+    print(i)
+
+    # 包含判定
+    # サブセットか？(含まれているか)
+    j = {'A', 'B'}
+    k = {'A', 'B', 'C'}
+    l = j.issubset(k)
+    print(l)
+
+    # スーパーセットか？(含んでいるか)
+    m = k.issuperset(j)
+    print(m)
+
+# 辞書
+def dict_type():
+    # 生成
+    weekdays = {
+        'Mon': '月',
+        'Tue': '火',
+        'Wed': '水',
+        'Thu': '木',
+        'Fri': '金',
+        'Sat': '土',
+        'Sun': '日',
+    }
+    print(weekdays)
+
+    # 二次元リストからの変換
+    weekdays_list = [
+        ['Mon', '月'],
+        ['Tue', '火'],
+        ['Wed', '水'],
+        ['Thu', '木'],
+        ['Fri', '金'],
+        ['Sat', '土'],
+        ['Sun', '日'],
+    ]
+    print(dict(weekdays_list))
+
+    # 辞書の値参照
+    print(weekdays['Mon'])
+
+    # 辞書への追加
+    d = {'key1': 100}
+    d['key2'] = 200
+    print(d)
+
+    # 辞書への更新
+    d['key2'] = 300
+    print(d)
+
+    # 全てのキーの取り出し
+    print(weekdays.keys())
+
+    # 全ての値の取り出し
+    print(weekdays.values())
+
+    # 全てのキー・値の組み合わせの取り出し
+    print(weekdays.items())
+
+    # キーの存在判定
+    print('Mon' in weekdays.keys())
+
+    # 値の存在判定
+    print('月' in weekdays.values())
+    
+    # キー・値の組み合わせの存在判定
+    print(('Mon', '月') in weekdays.items())
+
+    # 辞書の要素削除はリストと同じため省略
+
+# bytes型
+def bytes_type():
+    b = bytes([0, 97, 122, 254])
+    print(b)
+
+
 show_keyword()
 int_type()
 bool_type()
 float_type()
 str_type()
 list_type()
+tuple_type()
+range_type()
+set_type()
+dict_type()
+bytes_type()
