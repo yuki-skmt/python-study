@@ -8,6 +8,8 @@ from keyword import kwlist
 def show_keyword():
     print(kwlist)
 
+show_keyword()
+
 # 基本の組み込みデータ型
 # int
 def int_type():
@@ -43,6 +45,8 @@ def int_type():
     b = 200
     c = 300
     print(a < b < c) # a < b and b < cと書かなくて良い
+
+int_type()
     
 # bool
 def bool_type():
@@ -61,6 +65,8 @@ def bool_type():
     z = not a
     print(z)
 
+bool_type()
+
 # float
 def float_type():
     a = 0.1
@@ -77,6 +83,8 @@ def float_type():
 
     # 非数(nan)
     print(e + -e)
+
+float_type()
 
 # str
 def str_type():
@@ -115,6 +123,8 @@ bbb'
     # 文字数
     text10 = 'abcdefghijklmn'
     print(len(text10))
+
+str_type()
 
 # list
 def list_type():
@@ -184,6 +194,8 @@ def list_type():
     print(l)
     print(m)
 
+list_type()
+
 # tuple
 def tuple_type():
     t1 = ()
@@ -204,6 +216,8 @@ def tuple_type():
     print(x)
     print(y)
 
+tuple_type()
+
 # range
 def range_type():
     r1 = range(4)
@@ -214,6 +228,8 @@ def range_type():
     print(list(r2))
     print(list(r3))
     print(list(r4))
+
+range_type()
 
 # set
 def set_type():
@@ -275,6 +291,8 @@ def set_type():
     m = k.issuperset(j)
     print(m)
 
+set_type()
+
 # 辞書
 def dict_type():
     # 生成
@@ -333,20 +351,11 @@ def dict_type():
 
     # 辞書の要素削除はリストと同じため省略
 
+dict_type()
+
 # bytes型
 def bytes_type():
     b = bytes([0, 97, 122, 254])
     print(b)
 
-
-show_keyword()
-int_type()
-bool_type()
-float_type()
-str_type()
-list_type()
-tuple_type()
-range_type()
-set_type()
-dict_type()
 bytes_type()
