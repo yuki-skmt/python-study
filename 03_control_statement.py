@@ -67,4 +67,44 @@ def for_statement():
         if idx != 0:
             print(idx, val)
 
+    # zip関数
+    list1 = ["a", "b", "c"]
+    list2 = [1, 2, 3]
+    for x, y in zip(list1, list2):
+        print(x, y)
+
+    # 逆順にループ処理(reversed使用)
+    l = [1, 2, 3, 4, 5]
+    for x in reversed(l):
+        print(x)
+
+    # 逆順にループ処理(スライス構文使用)
+    for x in l[::-1]:
+        print(x)
+    
+    # リスト内包表記
+    list1 = [1, 2, 3]
+    list2 = [val * 2 for val in list1]
+    print(list2)
+
+    # リスト内包表記(条件分岐あり)
+    list2 = [val * 2 for val in list1 if val % 2 == 1]
+    print(list2)
+
+    # 集合内包表記
+    set1 = {val * 2 for val in list1}
+    print(set1)
+
+    # リスト内包表記(条件分岐あり)
+    set2 = {val * 2 for val in list1 if val % 2 == 1}
+    print(set2)
+
+    # 辞書内包表記
+    dict1 = {val: 0 for val in list1}
+    print(dict1)
+
+    # 辞書内包表記(条件分岐あり)
+    dict2 = {val: 0 for val in list1 if val >= 2}
+    print(dict2)
+
 for_statement()
